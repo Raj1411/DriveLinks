@@ -17,9 +17,9 @@ if file_id=='':
     'Please Enter File id '
 else:
     gauth=GoogleAuth()
-#     gauth.LocalWebserverAuth()
+    gauth.LocalWebserverAuth()
     drive=GoogleDrive(gauth)
-#     keyboard.press_and_release('ctrl+w')
+    keyboard.press_and_release('ctrl+w')
     per={
         'type': 'anyone',
         'value': 'anyone',
