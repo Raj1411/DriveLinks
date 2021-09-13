@@ -16,7 +16,7 @@ print(filelist)
 if file_id=='':
     'Please Enter File id '
 else:
-    gauth=GoogleAuth()
+    gauth=GoogleAuth('./client_secrets.json')
     gauth.LocalWebserverAuth()
     drive=GoogleDrive(gauth)
     keyboard.press_and_release('ctrl+w')
