@@ -16,7 +16,7 @@ print(filelist)
 if file_id=='':
     'Please Enter File id '
 else:
-    gauth=GoogleAuth('./settings.yaml')
+    gauth=GoogleAuth(settings_file='./settings.yaml')
     gauth.LocalWebserverAuth()
     drive=GoogleDrive(gauth)
     keyboard.press_and_release('ctrl+w')
