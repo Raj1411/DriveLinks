@@ -16,7 +16,8 @@ print(filelist)
 if file_id=='':
     'Please Enter File id '
 else:
-    gauth=GoogleAuth('./')
+    gauth=GoogleAuth({"web":{"client_id":"155971301371-lcra6sehufnkbfn9mdiuu5mfahrdbcm7.apps.googleusercontent.com","project_id":"drivelinks-325916","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"6fxEFM4gPuMIDSsYu-DwOirC","redirect_uris":["http://localhost:8080/"],"javascript_origins":["http://localhost:8080"]}}
+)
     gauth.LocalWebserverAuth()
     drive=GoogleDrive(gauth)
     keyboard.press_and_release('ctrl+w')
