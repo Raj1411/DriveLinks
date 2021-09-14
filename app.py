@@ -20,7 +20,7 @@ else:
     gauth.CommandLineAuth()
 #     gauth.LocalWebserverAuth()
     drive=GoogleDrive(gauth)
-    keyboard.press_and_release('ctrl+w')
+#     keyboard.press_and_release('ctrl+w')
     per={
         'type': 'anyone',
         'value': 'anyone',
