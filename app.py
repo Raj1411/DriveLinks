@@ -6,6 +6,7 @@ import base64
 import pandas as pd
 import io
 import time
+from google_auth_oauthlib import flow
 
 
 st.title('Extract Google Drive Links')
@@ -16,9 +17,14 @@ print(filelist)
 if file_id=='':
     'Please Enter File id '
 else:
+    appflow = flow.InstalledAppFlow.from_client_secrets_file(
+    "./", scopes=["https://www.googleapis.com/auth/"])
+    if launch_browser:
+        appflow.run_local_server()
+    else:
+        appflow.run_console()
+        credentials = appflow.credentials
     gauth=GoogleAuth()
-    gauth.CommandLineAuth()
-    gauth.Refresh()
 #     gauth.LocalWebserverAuth()
     drive=GoogleDrive(gauth)
 #     keyboard.press_and_release('ctrl+w')
