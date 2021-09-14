@@ -17,7 +17,16 @@ if file_id=='':
     'Please Enter File id '
 else:
     gauth=GoogleAuth()
-    gauth.LocalWebserverAuth()
+    gauth.LoadCredentialsFile("mycreds.txt")
+    if gauth.credentials is None:
+        gauth.LocalWebserverAuth()
+    elif gauth.access_token_expired:
+            gauth.Refresh()
+    else:
+        gauth.Authorize()
+    gauth.SaveCredentialsFile("mycreds.txt")
+
+
     drive=GoogleDrive(gauth)
     keyboard.press_and_release('ctrl+w')
     per={
