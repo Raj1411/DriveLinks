@@ -18,6 +18,7 @@ if file_id=='':
 else:
     gauth=GoogleAuth()
     gauth.CommandLineAuth()
+    gauth.Refresh()
 #     gauth.LocalWebserverAuth()
     drive=GoogleDrive(gauth)
 #     keyboard.press_and_release('ctrl+w')
