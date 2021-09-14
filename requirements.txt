@@ -6,3 +6,8 @@ pandas
 PyDrive
 streamlit
 openpyxl
+requests-oauthlib
+google-auth
+google-auth-httplib2
+google-auth-oauthlib
+oauth2client
