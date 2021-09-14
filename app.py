@@ -17,7 +17,7 @@ if file_id=='':
     'Please Enter File id '
 else:
     gauth=GoogleAuth()
-    gauth.LocalWebserverAuth(host_name='http://localhost:8080')
+    gauth.LocalWebserverAuth()
     drive=GoogleDrive(gauth)
     keyboard.press_and_release('ctrl+w')
     per={
