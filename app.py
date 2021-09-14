@@ -17,15 +17,6 @@ print(filelist)
 if file_id=='':
     'Please Enter File id '
 else:
-    launch_browser = True
-
-    appflow = flow.InstalledAppFlow.from_client_secrets_file(
-    "./client_secrets.json", scopes=["https://www.googleapis.com/auth/"])
-    if launch_browser:
-        appflow.run_local_server()
-    else:
-        appflow.run_console()
-        credentials = appflow.credentials
     gauth=GoogleAuth()
 #     gauth.LocalWebserverAuth()
     drive=GoogleDrive(gauth)
