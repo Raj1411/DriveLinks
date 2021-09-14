@@ -18,7 +18,7 @@ if file_id=='':
     'Please Enter File id '
 else:
     appflow = flow.InstalledAppFlow.from_client_secrets_file(
-    "./", scopes=["https://www.googleapis.com/auth/"])
+    "./client_secrets.json", scopes=["https://www.googleapis.com/auth/"])
     if launch_browser:
         appflow.run_local_server()
     else:
